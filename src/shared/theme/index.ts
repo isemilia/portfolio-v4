@@ -1,1 +1,1 @@
-export { default } from './theme';
+export { default, type TAppTheme } from './theme';
