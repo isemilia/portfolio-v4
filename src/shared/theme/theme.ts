@@ -6,4 +6,10 @@ const theme = {
   text,
 };
 
+export type TAppTheme = Omit<typeof theme, 'text'> & {
+  text: {
+    variants: (typeof theme)['text']['variants']['default'];
+  } & Omit<(typeof theme)['text'], 'variants'>;
+};
+
 export default theme;
